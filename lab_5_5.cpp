@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+using namespace std;
 
 int main () {
 
@@ -15,6 +16,18 @@ int main () {
   cout << "Please enter your name : ";
 
   // เขียนคำสั่งรับชื่อ แล้วเก็บในตัวแปร playerName
+  cin >> playerName;
+
+    // แสดงชื่อ โดยตัดให้เหลือแค่ 10 ตัวอักษร
+    if (playerName.length() > 10){
+            cout << "Your name is too long!!!!" << endl;
+           playerName.erase (playerName.begin()+10, playerName.end());
+            cout << "Your name has been changed to " << playerName << endl;
+    }
+    if (playerName.length() < 10){
+        cout << playerName << endl;
+    }
+
 
 
   // เขียนคำสั่งแสดงผล คำบรรยายสภาพแวดล้อม สถานการณ์ และคำทักทายที่มีชื่อตัวละคร
